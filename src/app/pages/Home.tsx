@@ -13,14 +13,6 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[85vh] flex items-center justify-center overflow-hidden bg-background">
         <div className="relative z-10 text-center max-w-5xl px-4 flex flex-col items-center mt-[-90px] mr-[0px] mb-[0px] ml-[0px]">
-          <motion.span 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="font-[Webster_Italic_WF] text-xl md:text-2xl text-[rgb(0,65,106)] mb-2 block text-[44px]"
-          >
-            At the Sign of
-          </motion.span>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

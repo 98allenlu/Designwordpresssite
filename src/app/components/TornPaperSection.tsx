@@ -36,18 +36,7 @@ export function TornPaperSection({
       } : undefined}
       {...props}
     >
-      {/* Top Edge */}
-      {topEdge && (
-        <div className={cn("absolute top-0 left-0 w-full h-[50px] md:h-[80px] -translate-y-[99%] rotate-180 z-10 pointer-events-none", fillClass)}>
-          <svg className="block w-full h-full" fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1920 79.9554">
-            <g>
-              <path d={svgPaths.p56558a0} />
-              <path d={svgPaths.pd38340} />
-              <path d={svgPaths.p258d2630} />
-            </g>
-          </svg>
-        </div>
-      )}
+      {/* Top Edge removed as requested */}
 
       {/* Content */}
       <div className="relative z-10">
@@ -55,17 +44,7 @@ export function TornPaperSection({
       </div>
 
       {/* Bottom Torn Edge */}
-      {bottomEdge && (
-        <div className={cn("absolute bottom-0 left-0 w-full h-[50px] md:h-[80px] translate-y-[99%] z-10 pointer-events-none", fillClass)}>
-          <svg className="block w-full h-full" fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1920 79.9554">
-            <g>
-              <path d={svgPaths.p56558a0} />
-              <path d={svgPaths.pd38340} />
-              <path d={svgPaths.p258d2630} />
-            </g>
-          </svg>
-        </div>
-      )}
+      {/* Bottom Edge removed as requested */}
     </div>
   );
 }
