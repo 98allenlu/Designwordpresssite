@@ -12,7 +12,7 @@ export function Footer() {
       </div>
       
       <div className="bg-primary py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -translate-y-6">
+        <div className="w-full px-4 sm:px-6 lg:px-8 -translate-y-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="font-headline text-2xl mb-4">At the Sign of the Rainbow & Dove</h3>

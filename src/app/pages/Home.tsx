@@ -53,7 +53,7 @@ export default function Home() {
 
       {/* Featured Research */}
       <TornPaperSection backgroundClass="bg-[#FCFBF1]" className="py-20 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-12">
             <div>
               <h2 className="font-headline text-4xl md:text-5xl text-primary mb-2">Recent Research</h2>
@@ -87,7 +87,7 @@ export default function Home() {
 
       {/* Featured Shop Items */}
       <section className="bg-background py-20 md:py-32 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
            <div className="flex justify-between items-end mb-12">
             <div>
               <h2 className="font-headline text-4xl md:text-5xl text-primary mb-2">From the Shop</h2>

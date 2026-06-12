@@ -20,7 +20,7 @@ export default function Research() {
 
       </PageHeaderShape>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-[-200px] relative z-10 pt-[20px] pr-[32px] pb-[0px] pl-[32px] mb-[0px]">
+      <div className="w-full px-4 sm:px-6 lg:px-8 mt-[-200px] relative z-10 pt-[20px] pr-[32px] pb-[0px] pl-[32px] mb-[0px]">
          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             {/* Sidebar */}
             <div className="hidden lg:block">

@@ -59,7 +59,7 @@ export function Navigation() {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-[170px]"> {/* Increased height from h-24 to h-28 */}
           {/* Logo */}
           <Link to="/" className="flex-shrink-0 flex flex-col items-start justify-center group">

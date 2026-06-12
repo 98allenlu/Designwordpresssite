@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { TornPaperSection } from "@/app/components/TornPaperSection";
 import { researchPosts, shopItems } from "@/app/data";
 import { ArrowLeft } from "lucide-react";
+import { ProductPage } from "@/app/components/ProductPage";
 
 export default function Article() {
   const { slug, category, subslug } = useParams();
@@ -22,6 +23,11 @@ export default function Article() {
     return <div className="p-20 text-center">Item not found</div>;
   }
 
+  if (isProduct && product) {
+    const related = shopItems.filter(s => s.id !== product.id).slice(0, 4);
+    return <ProductPage product={product} relatedProducts={related} />;
+  }
+
   return (
     <div className="min-h-screen bg-background pb-20">
       <div className="relative h-[50vh] w-full">
@@ -30,7 +36,7 @@ export default function Article() {
           alt={item.title} 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/40 flex items-end justify-center pb-12 pt-16">
            <div className="text-center text-white px-4">
              <h1 className="font-headline text-4xl md:text-6xl mb-4 max-w-4xl">{item.title}</h1>
              {!isProduct && post && <p className="text-xl font-body opacity-90">{post.date} • {post.category}</p>}
