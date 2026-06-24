@@ -4,6 +4,7 @@ import { TornPaperSection } from "@/app/components/TornPaperSection";
 import { researchPosts, shopItems } from "@/app/data";
 import { ArrowLeft } from "lucide-react";
 import { ProductPage } from "@/app/components/ProductPage";
+import { BlogPostPage } from "@/app/components/BlogPostPage";
 
 export default function Article() {
   const { slug, category, subslug } = useParams();
@@ -26,6 +27,10 @@ export default function Article() {
   if (isProduct && product) {
     const related = shopItems.filter(s => s.id !== product.id).slice(0, 4);
     return <ProductPage product={product} relatedProducts={related} />;
+  }
+
+  if (!isProduct && post) {
+    return <BlogPostPage post={post} allPosts={researchPosts} />;
   }
 
   return (
