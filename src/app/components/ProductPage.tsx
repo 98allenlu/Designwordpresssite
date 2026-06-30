@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "@/app/context/CartContext";
 import { ArrowLeft, Minus, Plus, ShoppingBag, ChevronDown, ChevronUp, Truck, RotateCcw, ShieldCheck } from "lucide-react";
 
 interface ShopItem {
@@ -59,10 +60,12 @@ function Accordion({ label, content }: { label: string; content: string }) {
 export function ProductPage({ product, relatedProducts = [] }: ProductPageProps) {
   const [quantity, setQuantity] = useState(1);
   const [added, setAdded] = useState(false);
+  const { addItem } = useCart();
 
   const priceNum = parseFloat(product.price.replace(/[^0-9.]/g, ""));
 
   function handleAddToCart() {
+    addItem({ id: product.id, title: product.title, price: product.price, image: product.image, slug: product.slug }, quantity);
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
   }

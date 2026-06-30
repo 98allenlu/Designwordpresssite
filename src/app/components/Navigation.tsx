@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ChevronDown, ShoppingCart, Search } from "lucide-react";
+import { useCart } from "@/app/context/CartContext";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
 import headerBg from 'figma:asset/e3b6eecc0d2310357d508011639007ba5941d4de.png';
@@ -40,6 +41,8 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
+  const navigate = useNavigate();
+  const { totalItems } = useCart();
 
   const toggleDropdown = (name: string) => {
     if (activeDropdown === name) {
@@ -120,21 +123,30 @@ export function Navigation() {
             ))}
             
             <div className="flex items-center space-x-4 ml-4 border-l pl-4 border-primary/20">
-              <button className="text-foreground hover:text-primary transition-colors">
+              <button onClick={() => navigate("/search")} className="text-foreground hover:text-primary transition-colors">
                 <Search className="h-5 w-5" />
               </button>
-              <button className="text-foreground hover:text-primary relative transition-colors">
+              <Link to="/cart" className="text-foreground hover:text-primary relative transition-colors">
                 <ShoppingCart className="h-5 w-5" />
-                <span className="absolute -top-2 -right-2 bg-accent text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center font-body">0</span>
-              </button>
+                {totalItems > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-accent text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center font-body">
+                    {totalItems}
+                  </span>
+                )}
+              </Link>
             </div>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
-             <button className="text-foreground hover:text-primary mr-4">
-                <ShoppingCart className="h-5 w-5" />
-              </button>
+            <Link to="/cart" className="text-foreground hover:text-primary mr-4 relative">
+              <ShoppingCart className="h-5 w-5" />
+              {totalItems > 0 && (
+                <span className="absolute -top-2 -right-2 bg-accent text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center font-body">
+                  {totalItems}
+                </span>
+              )}
+            </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primary focus:outline-none"
