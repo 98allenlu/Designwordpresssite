@@ -16,7 +16,7 @@ export default function Research() {
   return (
     <div className="min-h-screen bg-background pb-20">
       <PageHeaderShape fillColor="#7EA172">
-        <h1 className="font-headline text-4xl md:text-6xl mb-[14px] mt-[15px] mr-[0px] ml-[0px] mx-[0px] my-[15px]">Research & Blog</h1>
+        <h1 className="font-headline text-4xl md:text-6xl mx-[0px] my-[13px]">Research & Blog</h1>
 
       </PageHeaderShape>
 

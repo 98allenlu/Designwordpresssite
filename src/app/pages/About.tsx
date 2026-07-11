@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div className="bg-background pb-20">
       <PageHeaderShape fillColor="var(--secondary)">
-        <h1 className="font-headline text-[60px] leading-[60px] text-white mt-[15px]">About</h1>
+        <h1 className="font-headline text-[60px] leading-[60px] text-white mx-[0px] mt-[13px] mb-[0px]">About</h1>
       </PageHeaderShape>
 
       <div className="w-[91%] max-w-[1216px] mx-auto mt-[-180px] relative z-10">
