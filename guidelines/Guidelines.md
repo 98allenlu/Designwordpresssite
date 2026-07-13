@@ -219,6 +219,23 @@ This file defines the complete design system for use in **Figma Make** and devel
 
 ---
 
+## Code Standards
+- Use only Tailwind CSS. No inline styles.
+- Define brand colors, fonts, and spacing in Tailwind theme config or CSS variables.
+
+## Component Structure
+- Every distinct page section must be its own component in a separate file.
+- Components under 150 lines.
+- Name components descriptively (e.g., HeroSection, PricingCards).
+
+## HTML & Accessibility
+- Use semantic HTML (header, nav, main, section, footer, form, article).
+- Descriptive alt text and labels are mandatory.
+
+## What to Avoid
+- No unnecessary dependencies.
+- No placeholder/lorem ipsum text.
+- No conflicting CSS frameworks.
 End of file.
 
 <!--
