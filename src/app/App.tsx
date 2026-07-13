@@ -11,6 +11,7 @@ import Article from "@/app/pages/Article";
 import Cart from "@/app/pages/Cart";
 import Checkout from "@/app/pages/Checkout";
 import Search from "@/app/pages/Search";
+import HireMe from "@/app/pages/HireMe";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
               <Route path="/research/:category/:subslug" element={<Article />} />
               <Route path="/research/:slug" element={<Article />} />
               <Route path="/about" element={<About />} />
+              <Route path="/hire-me" element={<HireMe />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/search" element={<Search />} />

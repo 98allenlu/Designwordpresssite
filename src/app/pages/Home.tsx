@@ -56,8 +56,8 @@ export default function Home() {
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-12">
             <div>
-              <h2 className="font-headline text-4xl md:text-5xl text-primary mb-2">Recent Research</h2>
-              <p className="font-body text-muted-foreground text-lg">Exploring history through color and cloth.</p>
+              <h2 className="font-headline text-4xl md:text-5xl text-primary mb-2 text-[#000000]">Recent Research</h2>
+              <p className="font-body text-muted-foreground text-lg text-[#000000]">Exploring history through color and cloth.</p>
             </div>
             <Link to="/research" className="hidden md:flex items-center text-primary font-heading text-lg hover:text-accent transition-colors">
               View All Posts <ArrowRight className="ml-2 h-4 w-4" />

@@ -34,6 +34,7 @@ const navItems = [
       { name: "Paper", path: "/research/paper" },
     ],
   },
+  { name: "Hire Me", path: "/hire-me", highlight: true },
   { name: "About", path: "/about" },
 ];
 
