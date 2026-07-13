@@ -40,7 +40,7 @@ export default function HireMe() {
       <header className="w-full px-6 py-16 border-b border-border">
         <div className="max-w-3xl">
           <p
-            style={{ fontFamily: "var(--font-heading)", fontSize: "12px", letterSpacing: "0.12em", color: "var(--accent)" }}
+            style={{ fontFamily: "var(--font-heading)", fontSize: "16px", letterSpacing: "0.12em", color: "var(--accent)" }}
             className="uppercase mb-4"
           >
             Available for Projects
